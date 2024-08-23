@@ -1,0 +1,228 @@
+
+
+/*header y footer de todos*/
+*{
+    margin:0.2%;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-size: calc(0.5vw + 1.9vh);
+}
+body{
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-family: 'Times New Roman', Times, serif; */
+    background-color: rgb(240, 240, 240);
+    text-shadow: none;
+    width: 98vw;
+    /* height: 65vh; */
+    margin:1vw;
+    /* text-align: center; */
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    /* width: 100%; */
+    font-size: 24px;
+}
+.estado, .reportesTextuales, .reportesGraficos{
+    display:inline-flex;
+}
+.estado .campos{
+    display: grid;
+    
+}
+
+/* .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: calc(8vw + 25vh);
+    
+}
+.estado .botones{
+    display: block;
+    
+}
+.estado .botones .button{
+    width: calc(10vw + 20vh);
+    margin-bottom: 5px;
+}
+#btnImprimirGrafico, #btnImprimirReportes{
+    margin-left: calc(0px - 3vw - 6vh);
+    width: calc(8vw + 28vh);
+}
+#btnPaginaPrincipal{
+    width: calc(350px + 2vh + 5vw);
+    margin-top: calc(3vh + 4vw);
+}
+/* ----listas--------*/
+button:hover{
+    
+    background-color: #0c13752c;
+    /* background-color: rgb(240, 240, 240); */
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    
+    background-color: #00000000;
+    margin-right: 10%;
+    width: 100%;
+  }
+  .dropdown button{
+    width: calc(10vw + 15vh);
+  }
+.dropbtn {
+    /* background-color: rgb(240, 240, 240); */
+    color: rgb(0, 0, 0);
+    /* padding: 10px; */
+    border:1px solid black;
+    
+    width: calc(110px + 8vw);
+    cursor: pointer;
+    padding:0.5vw;
+    padding-right: 5%;
+}
+/* Código de la flecha hacia la derecha */
+.dropbtn::after {
+    content: "\25B6"; 
+    
+    /* position: absolute; */
+    /* top: calc(1vw + 1vh); Alinear verticalmente al centro */
+    /*transform: translateY(-50%); /*Alinear verticalmente al centro*/
+    /* right: calc(18px + 3vw + 3vh); Espacio a la derecha del botón */
+    margin-left: 30%;
+    margin-right: -40%;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    width: 120%;
+    max-height: 60vh;
+    overflow-y: auto;/* Barra de desplazamiento vertical */
+    overflow-x: hidden;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.dropdown-content .renglon{
+    border-bottom: 1px solid #000;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.dropdown-content label{
+    height: 2vh;
+    margin-top: calc(0.1vh + 0.3vw);
+    margin-bottom: calc(0.5vh + 0.3vw);
+    /* font-size: calc(0.6vh + 0.7vw); */
+    display: inline-block; /* Para permitir el uso de vertical-align */
+    vertical-align: top; /* Alinear el contenido en la parte superior */
+    margin-left: 1vw;
+    white-space: nowrap;
+    width: 15px;
+}
+
+.dropdown-content .renglon input[type="checkbox"]{
+    height: 2vh;
+    margin-top: calc(0.2vh + 0.5vw);
+    margin-left: calc(10vw + 20vh);
+}
+
+.dropdown:hover .dropdown-content, .dropdownTamano:hover .dropdown-content,
+.dropdownAlineacion:hover .dropdown-content, .dropdownTipoLetra:hover .dropdown-content{
+    display: block;
+}
+
+
+/* ----------- configurarEtiquetas -----------------*/
+@font-face {
+    font-family: 'Britanic Bold';
+    src: url('../fonts/britanicBold.ttf') format('truetype');
+}
+/* #etiquetaApellido{
+    font-family: "Britanic Bold", sans-serif;
+} */
+.mainEstadoEvento{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+table{
+    border-color:#0000003b;
+}
+table .f1{
+    width: calc(6vw + 6vh);
+}
+.tamanoEtiqueta{
+    display: flex;
+    
+}
+.tamanoEtiqueta *{
+    margin-right:3.5%;
+}
+.tamanoEtiqueta label, .tamanoEtiqueta form{
+    margin-top: 2.5%;
+    white-space: nowrap;
+}
+.tamanoEtiqueta .button{
+    margin-right: 0;
+    margin-bottom: 3%;
+}
+#btnGuardarCredencial {
+    width: calc(5vw + 10vh);
+
+}
+
+.tamano{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /* width: 100px; */
+}
+
+.w30{
+    width: calc(13vh + 6vw);
+}
+.graficoEtiqueta{
+    width: 400px;
+    height: 197px;
+    background-color: #ffffff;
+    border:1px solid black;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+.graficoEtiqueta *{
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+/* #credencialIDBarra{
+    font-family: "Code39",sans-serif;
+   
+} */

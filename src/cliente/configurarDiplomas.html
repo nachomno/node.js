@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/icono2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="imagenes/icono2.png" type="image/x-icon">
+    
+    
+    <title>Centurya</title>
+    <link rel="stylesheet" href="css/ventanasSecundarias.css">
+</head>
+
+<body id="bodyConfigurarDiploma">
+    <!-- --------------------------- main------------------------- -->
+    <section class="mainConfigurarDiplomas">
+        <h1>Credenciales</h1>
+        <div class="estado">
+            
+            <div class="campos">
+                <label>Tamaño credencial: </label>
+                <div class="dropdown">
+                    <button class="dropbtn">80 x 40</button>
+                    <div class="dropdown-content">
+                        <form id="clReportesTextuales">
+                            <div class="renglon">
+                                <label>Presentes según credencial</label>
+                            </div>
+                            <div class="renglon">
+                                <label>Presentes según credencial</label>
+                            </div>
+                            <div class="renglon">
+                                <label>Presentes según credencial</label>
+                            </div>
+    
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="botones">
+                <button class="button" id="btnImpPresentes">Imprimir Presentes</button>
+                <button class="button" id="btnImpPreacreditados">Imprimir Preacreditados</button>
+            </div>
+        </div>
+        <h1>Reportes Textuales</h1>
+        <div class="reportesTextuales">
+            
+            <div class="dropdown">
+                <button class="dropbtn">Títulos</button>
+                <div class="dropdown-content">
+                    <form id="clReportesTextuales">
+                        <div class="renglon">
+                            <label>Presentes según credencial</label><br>
+                            <input type="checkbox" name=0 checked>
+                        </div>
+                        <div class="renglon">
+                            <label>Inscriptos según credencial</label><br>
+                            <input type="checkbox" name=1 checked>
+                        </div>
+                        <div class="renglon">
+                            <label>Presentes según beca</label><br>
+                            <input type="checkbox" name=2 checked>
+                        </div>
+                        <div class="renglon">
+                            <label>Insriptos según beca</label><br>
+                            <input type="checkbox" name=3 checked>
+                        </div>
+                        <div class="renglon">
+                            <label>Presentes según institución</label><br>
+                            <input type="checkbox" name=4 checked>
+                        </div>
+                        <div class="renglon">
+                            <label>Inscriptos según institución</label><br>
+                            <input type="checkbox" name=5 checked>
+                        </div>
+                        <div class="renglon">
+                            <label>Presentes según país</label><br>
+                            <input type="checkbox" name=6 checked>
+                        </div>
+                        <div class="renglon">
+                            <label>Inscriptos según país</label><br>
+                            <input type="checkbox" name=7 checked>
+                        </div>
+                        <div class="renglon">
+                            <label>Presentes según provincia</label><br>
+                            <input type="checkbox" name=8 checked>
+                        </div>
+                        <div class="renglon">
+                            <label>Inscriptos según provincia</label><br>
+                            <input type="checkbox" name=9 checked>
+                        </div>
+
+                    </form>
+                    
+                </div>
+            </div>
+            
+            <button class="button" id="btnImprimirReportes">Imprimir Reportes</button>
+        </div>
+        <h1>Reportes Gráficos</h1>
+        <div class="reportesGraficos">
+            
+            <div class="dropdown">
+                <button class="dropbtn">Títulos</button>
+                <div class="dropdown-content">
+                    <form id="clReportesGraficos">
+                        <div class="renglon">
+                            <label>Cantidad de acreditados</label><br>
+                            <input type="checkbox" name=0 checked>
+                        </div>
+                        <div class="renglon">
+                            <label>Presentes vs Ausentes</label><br>
+                            <input type="checkbox" name=1 checked>
+                        </div>
+                        <div class="renglon">
+                            <label>Inscriptos por categoría</label><br>
+                            <input type="checkbox" name=2 checked>
+                        </div>
+                        <div class="renglon">
+                            <label>Presentes por categoría</label><br>
+                            <input type="checkbox" name=3 checked>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+            <button class="button" id="btnImprimirGrafico">Imprimir Gráficos</button>
+        </div>
+        <button class="button" id="btnPaginaPrincipal">Página Principal</button>    
+    </section>
+    
+    <script src="./js/estadoEvento.js"></script>
+
+
+</body>
+
+</html>

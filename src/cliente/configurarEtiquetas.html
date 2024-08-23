@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/icono2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="imagenes/icono2.png" type="image/x-icon">
+    
+    <script src="./fonts/jquery.min.js"></script>
+    <script src="./fonts/JsBarcode.all.min.js"></script>
+    <title>Centurya</title>
+    <link rel="stylesheet" href="css/ventanasSecundarias.css">
+</head>
+
+<body id="bodyConfigurarEtiqueta">
+    <!-- --------------------------- main------------------------- -->
+    <section class="mainEstadoEvento">
+        <h1>Etiquetas</h1>
+        <div class="tamanoEtiqueta">
+            <label >Tamaño etiquetas: </label>
+            <form class="alineacion datosPagina">
+                <!-- HTML Dropdown list -->
+                <select id="tamanoEtiqueta" class="">  
+                    <option value="8040">80 x 40</option>  
+                    <option value="12060">120 x 60</option>  
+                    <option value="16080">160 x 80</option>
+                </select> 
+            </form>
+            
+            <div>
+                <button class="button" id="btnGuardarCredencial">Guardar</button>
+            </div> 
+        </div>
+        <table border="1">
+            <tr>
+                <th style="width: 105px;"></th>
+                <th>Tamaño</th>
+                <th>Alineación</th>
+                <th>Tipo Letra</th>
+            </tr>
+            <tr>
+                <td class="f1"><input type="checkbox" value="cbApellido">  Apellido</td>
+                <td>
+                    <form class="tamano datosPagina">
+                        <!-- HTML Dropdown list -->
+                        <select id="tamanoApellido">  
+                            <option value="10">10</option>  
+                            <option value="12">12</option>  
+                            <option value="14">14</option>  
+                            <option value="16">16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="22">22</option>
+                            <option value="24">24</option>
+                            <option value="26">26</option>
+                            <option value="28">28</option>
+                            <option value="30">30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                            <option value="38">38</option>
+                            <option value="40">40</option>
+                        </select> 
+                    </form>
+                    
+                </td>
+                <td>
+                    <form class="alineacion datosPagina">
+                        <!-- HTML Dropdown list -->
+                        <select id="alineacionApellido">  
+                            <option value="izquierda">Izquierda</option>  
+                            <option value="centrado">Centrado</option>  
+                            <option value="derecha">Derecha</option>
+                        </select> 
+                    </form>
+                    
+                </td>
+                <td>
+                    <form class="tipoLetra datosPagina">
+                        <!-- HTML Dropdown list -->
+                        <select id="tipoLetraApellido" class="w30">  
+                            <option value="Arial">Arial</option>  
+                            <option value="Britanic Bold">Britanic Bold</option>  
+                            <option value="Times New Roman">Times New Roman</option>
+                        </select> 
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" value="cbNombre" checked> Nombre</td>
+                <td >
+                    <form class="tamano datosPagina">
+                        <!-- HTML Dropdown list -->
+                        <select id="tamanoNombre">  
+                            <option value="10">10</option>  
+                            <option value="12">12</option>  
+                            <option value="14">14</option>  
+                            <option value="16">16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="22">22</option>
+                            <option value="24">24</option>
+                            <option value="26">26</option>
+                            <option value="28">28</option>
+                            <option value="30">30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                            <option value="38">38</option>
+                            <option value="40">40</option>
+                        </select> 
+                    </form>
+                </td>
+                <td>
+                    <form class="alineacion datosPagina">
+                        <!-- HTML Dropdown list -->
+                        <select id="alineacionNombre">  
+                            <option value="izquierda">Izquierda</option>  
+                            <option value="centrado">Centrado</option>  
+                            <option value="derecha">Derecha</option>
+                        </select> 
+                    </form>
+                </td>
+                <td>
+                    <form class="tipoLetra datosPagina">
+                        <!-- HTML Dropdown list -->
+                        <select id="tipoLetraNombre" class="w30">  
+                            <option value="Arial">Arial</option>  
+                            <option value="Britanic Bold">Britanic Bold</option>  
+                            <option value="Times New Roman">Times New Roman</option>
+                        </select> 
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" value="cbCredencial" checked> Credencial</td>
+                <td>
+                    <form class="tamano datosPagina">
+                        <!-- HTML Dropdown list -->
+                        <select id="tamanoEtiqueta">  
+                            <option value="10">10</option>  
+                            <option value="12">12</option>  
+                            <option value="14">14</option>  
+                            <option value="16">16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="22">22</option>
+                            <option value="24">24</option>
+                            <option value="26">26</option>
+                            <option value="28">28</option>
+                            <option value="30">30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                            <option value="38">38</option>
+                            <option value="40">40</option>
+                        </select> 
+                    </form>
+                </td>
+                <td>
+                    <form class="alineacion">
+                        <!-- HTML Dropdown list -->
+                        <select id="alineacionCredencial">  
+                            <option value="izquierda">Izquierda</option>  
+                            <option value="centrado">Centrado</option>  
+                            <option value="derecha">Derecha</option>
+                        </select> 
+                    </form>
+                </td>
+                <td>
+                    <form class="tipoLetra">
+                        <!-- HTML Dropdown list -->
+                        <select id="tipoLetraCredencial" class="w30">  
+                            <option value="Arial">Arial</option>  
+                            <option value="Britanic Bold">Britanic Bold</option>  
+                            <option value="Times New Roman">Times New Roman</option>
+                        </select> 
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" value="cb3erCampo" checked> 3er Campo</td>
+                <td>
+                    <form class="tamano">
+                        <!-- HTML Dropdown list -->
+                        <select id="tamano3erCampo">  
+                            <option value="10">10</option>  
+                            <option value="12">12</option>  
+                            <option value="14">14</option>  
+                            <option value="16">16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="22">22</option>
+                            <option value="24">24</option>
+                            <option value="26">26</option>
+                            <option value="28">28</option>
+                            <option value="30">30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                            <option value="38">38</option>
+                            <option value="40">40</option>
+                        </select> 
+                    </form>
+                </td>
+                <td>
+                    <form class="alineacion">
+                        <!-- HTML Dropdown list -->
+                        <select id="alineacion3erCampo">  
+                            <option value="izquierda">Izquierda</option>  
+                            <option value="centrado">Centrado</option>  
+                            <option value="derecha">Derecha</option>
+                        </select> 
+                    </form>
+                </td>
+                <td>
+                    <form class="tipoLetra">
+                        <!-- HTML Dropdown list -->
+                        <select id="tipoLetra3erCampo" class="w30">  
+                            <option value="Arial">Arial</option>  
+                            <option value="Britanic Bold">Britanic Bold</option>  
+                            <option value="Times New Roman">Times New Roman</option>
+                        </select> 
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" value="cbBeca" checked> Beca</td>
+                <td>
+                    <form class="tamano">
+                        <!-- HTML Dropdown list -->
+                        <select id="tamanoBeca">  
+                            <option value="10">10</option>  
+                            <option value="12">12</option>  
+                            <option value="14">14</option>  
+                            <option value="16">16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="22">22</option>
+                            <option value="24">24</option>
+                            <option value="26">26</option>
+                            <option value="28">28</option>
+                            <option value="30">30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                            <option value="38">38</option>
+                            <option value="40">40</option>
+                        </select> 
+                    </form>
+                </td>
+                <td>
+                    <form class="alineacion">
+                        <!-- HTML Dropdown list -->
+                        <select id="alineacionBeca">  
+                            <option value="izquierda">Izquierda</option>  
+                            <option value="centrado">Centrado</option>  
+                            <option value="derecha">Derecha</option>
+                        </select> 
+                    </form>
+                </td>
+                <td>
+                    <form class="tipoLetra">
+                        <!-- HTML Dropdown list -->
+                        <select id="tipoLetraBeca" class="w30">  
+                            <option value="Arial">Arial</option>  
+                            <option value="Britanic Bold">Britanic Bold</option>  
+                            <option value="Times New Roman">Times New Roman</option>
+                        </select> 
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" value="cbApellido" checked> ID</td>
+                <td>
+                    <form class="tamano">
+                        <!-- HTML Dropdown list -->
+                        <select id="tamanoID">  
+                            <option value="10">10</option>  
+                            <option value="12">12</option>  
+                            <option value="14">14</option>  
+                            <option value="16">16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="22">22</option>
+                            <option value="24">24</option>
+                            <option value="26">26</option>
+                            <option value="28">28</option>
+                            <option value="30">30</option>
+                            <option value="32">32</option>
+                            <option value="34">34</option>
+                            <option value="36">36</option>
+                            <option value="38">38</option>
+                            <option value="40">40</option>
+                        </select> 
+                    </form>
+                </td>
+                <td>
+                    <form class="alineacion">
+                        <!-- HTML Dropdown list -->
+                        <select id="alineacionID">  
+                            <option value="izquierda">Izquierda</option>  
+                            <option value="centrado">Centrado</option>  
+                            <option value="derecha">Derecha</option>
+                        </select> 
+                    </form>
+                </td>
+                <td>
+                    <form class="tipoLetra">
+                        <!-- HTML Dropdown list -->
+                        <select id="tipoLetraID" class="w30">  
+                            <option value="CODE39">CODE39</option>  
+                            <option value="CODE128">CODE128</option>  
+                            <option value="CODE128A">CODE128A</option>
+                        </select> 
+                    </form>
+                    
+                </td>
+            </tr>
+        </table>
+        <div class="graficoEtiqueta">
+            <label id="etiquetaApellido">APELLIDO</label>
+            <label id="etiquetaNombre">NOMBRE</label>
+            <label id="etiquetaCredencial">CREDENCIAL</label>
+            <label id="etiqueta3erCampo">3ER CAMPO</label>
+            <label id="etiquetaBeca">Beca</label>
+            <canvas id="etiquetaID">12345</canvas>
+            
+        </div>
+        
+    </section>
+    
+    
+    <button class="button" id="btnPaginaPrincipal">Página Principal</button>
+    
+    <!-- <script type="text/javascript" src="./fonts/Code39JQuery/jquery/jquery-barcode.js">
+    </script>
+    <script>
+        $("#crencialIDNum").barcode(
+            "1234567890128", // Value barcode (dependent on the type of barcode)
+            "ean13" // type (string)
+        );
+    </script> -->
+    <script src="./js/configurarEtiquetas.js"></script>
+    
+</body>
+
+</html>

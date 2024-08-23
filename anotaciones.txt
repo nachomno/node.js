@@ -1,0 +1,7 @@
+para ejecutarlo escribir en la terminal: node src/server.js
+cuando lo ejecutás sin estar conectado a ninguna red podés entrar al programa con localhost:3000 o 127.0.0.1:3000
+
+preguntas
+qué tipo de fuentes quiere
+cuando pone algo en la etiqueda de costado quiere que aparezcan dos etiquetas en un renglón
+cuáles códigos de barras hay?

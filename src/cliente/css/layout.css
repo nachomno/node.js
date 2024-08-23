@@ -1,0 +1,790 @@
+
+
+/*header y footer de todos*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-size: calc(0.8vw + 0.7vh);
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(240, 240, 240);
+    text-shadow: none;
+    width: 98vw;
+    height: 95vh;
+}
+
+
+.menu{
+    position:relative;
+    z-index: 1;
+    
+}
+.menu .link{
+    border:0;
+    width: 100%;
+    text-align: left;
+    background-color: #b1b1b1;
+    border: 1px solid black;
+    display: inline-block;
+    padding: calc(0.1vw + 0.2vh);
+}
+
+.menu .dropbtnSup{
+    margin:calc(0.3vw + 0.5vh);
+    
+}
+.menu .dropdown{
+    position: relative;
+    display: inline-block;
+    margin-right: 1vw;
+    
+}
+.menu .dropdown button,.nested-dropdown{
+    width: 100%;
+}
+.menu .dropdown, .menu .dropbtn, .menu .dropdown-content button, .menu .dropbtnSup{
+    background-color: rgb(240, 240, 240);
+    
+    color: black;
+    
+    font-size: 100%;
+    text-shadow:#000;
+    font-weight: bold;
+    display: inline-block;
+    /* white-space: nowrap; */
+
+}   
+
+
+.menu .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: auto;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+    
+    margin-top:-1vh;
+    
+}
+
+.menu .dropbtn .dropbtnSup{
+    display: inline-block;
+    white-space: nowrap;
+    
+}
+.menu .dropbtn{
+    cursor: pointer;
+    margin-right: 2vw;
+    padding-left: 0px;
+    border-color: #00000000;
+    /* margin-left: calc(-0.5vw - 1vh); */
+    text-align: left;
+}
+.menu .dropbtn::after {
+    content: "\25B6"; /* Código de la flecha hacia la derecha */
+    font-size: calc(0.5vw + 0.7vh);
+    
+    position: absolute;
+    top: 50%; /* Alinear verticalmente al centro */
+    transform: translateY(-50%); /* Alinear verticalmente al centro */
+    right: 6px; /* Espacio a la derecha del botón */
+  }
+/* .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+} */
+
+/* .dropdown-content  */
+.menu button:hover {
+    background-color: #170c7552;
+}
+
+.menu .dropdown-content button, .dropdown-content #fileInput {
+    white-space: nowrap;
+}
+
+.menu .dropdown:hover .dropdown-content {
+    display: block;
+    
+}
+.menu.dropdown:hover .dropbtnSup{
+    background-color: #0c137552;
+}
+.menu .nested-dropdown:hover .dropbtn{
+    background-color: #0e0c7552;
+}
+.menu .nested-dropdown{
+    /* margin: -1%; */
+    border:1px solid black;
+    
+}
+.menu .nested-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(240, 240, 240);
+    /* min-width: 16vw; */
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.973);
+    z-index: 1;
+    left: 100%;
+    top: 0;
+    
+    
+}
+.menu .nested-dropdown-content button{
+    border: 1px solid rgba(0, 0, 0, 0.89);
+}
+
+.menu .nested-dropdown:hover .nested-dropdown-content {
+    display: block;
+    flex-direction: column;
+}
+
+.menu .dropbtn:hover{
+    background-color: #1603c580;
+    
+}
+
+
+
+
+
+.main{
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: calc(-1vw - 1vh);
+    z-index: 0;
+    /* left: calc(-3vw - 3vh); */
+}
+/* ------------ Búsqueda -------------------*/
+.Busqueda{
+    width: 60%;
+    display: flex;
+    
+}
+.campos{
+    width: 30px;
+}
+.titulo {
+    color: #000000;
+    width:100% ;
+    margin-left: calc(6vw + 8vh);
+    /* text-align: right; */
+    
+}
+h2{
+    text-align: center;
+    /* margin-bottom: calc(0.2vw + 0.2vh); */
+    font-size: calc(1.5vw + 1.5vh);
+    background-color: #00000000;
+    width: 100%;
+}
+.main .Busqueda .campos{
+    width: 100%;
+}
+.Busqueda .row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    padding: calc(0.2vw + 0.2vh);
+    
+}
+/* ----- */
+/* Estilos para las pestañas */
+.Busqueda .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.Busqueda .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.Busqueda .tab button:hover {
+    background-color: #ddd;
+}
+
+.Busqueda .tab button.active {
+    background-color: #ccc;
+}
+
+/* Estilos para el contenido de las pestañas */
+.Busqueda .tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* Mostrar el contenido de la pestaña activa */
+.Busqueda .tabcontent.show {
+    display: block;
+}
+
+/* .col-auto{
+    display: inline-block; */
+    /* width: 1vw; */
+    
+    /* margin-top: -3vh; */
+    /* Espacio adicional a la derecha del texto */
+    /* box-sizing: border-box;
+     
+}*/
+.Busqueda .row label {
+    margin-right:1vw ;
+    /* margin-left: 1vw; */
+    
+    text-align: right;
+    /* font-size: 2vh; */
+}
+.Busqueda input{
+    width: 30vw;
+    height: calc(1.2vh + 1.1vw);
+    /* margin: -10 0 0 0; */
+    font-size: calc(0.9vh + 0.8vw);
+    padding:1%;
+}
+
+ /* --------lista de campos --------- */
+.Busqueda .dropdown1 {
+    position: relative;
+    display: inline-block;
+    width: calc(12vh + 5vw);
+    background-color: #00000000;
+    /* margin-left: 1%; */
+    border:1px solid black;
+    margin-right: 2%;
+    /* margin-bottom: 0.5vw; */ 
+  }
+.Busqueda .dropbtn1 {
+    /* background-color: rgb(240, 240, 240); */
+    color: rgb(0, 0, 0);
+    /* padding: 10px; */
+    /* border:1px solid black; */
+    
+    width: calc(12vh + 5vw);
+    cursor: pointer;
+    /* padding:0.5vw; */
+    /* padding-right: 5%; */
+   
+}
+/* Código de la flecha hacia la derecha */
+.Busqueda .dropbtn1::after {
+    content: "\25B6"; 
+    /* font-size: calc(0.5vw + 0.7vh); */
+    /* background-color: #000; */
+    position: absolute;
+    top: 50%; /* Alinear verticalmente al centro */
+    transform: translateY(-50%); /* Alinear verticalmente al centro */
+    right: 1px; /* Espacio a la derecha del botón */
+}
+.Busqueda .dropdown1-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    width: calc(12vh + 5vw);
+    max-height: 60vh;
+    overflow-y: auto;/* Barra de desplazamiento vertical */
+    overflow-x: hidden;
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+    z-index: 2;
+    
+}
+.Busqueda .dropdown1-content .campo{
+    margin:0;
+    width: 100%;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el label */
+    
+}
+.Busqueda .dropdown1-content .campo:hover{
+    
+    background-color: #0c13752c;
+    /* background-color: rgb(240, 240, 240); */
+}
+
+/* 
+.Busqueda .dropdown1-content #checklist .campo input[type="checkbox"]{
+    height: 2vh;
+    margin-top: calc(0.2vh + 0.5vw);
+    margin-left: calc(4vw + 5vh);
+} */
+.Busqueda .dropdown1:hover .dropdown1-content {
+    display: block;
+}
+#valorCampoBusqueda{
+    width: calc(20vw + 5vh);
+    padding: 0%;
+    position:absolute;
+    
+}
+/* ----------------------------- */
+.Busqueda #columna2{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top:calc(-2.1vw - 2.5vh);
+    margin-left:10%;
+    /* margin-left: calc(-1vw - 1vh); */
+}
+.Busqueda #botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin-right: 15vw; */
+    margin-top: calc(3vw + 2vh);
+}
+.Busqueda #botones button{
+    width: calc(3vw + 4vw);
+    height: 90%;
+    font-weight: bold;
+    margin-bottom: calc(0.5vw + 1.5vh);
+    /* margin-top:calc(-0.5vw - 0.5vh); */
+    margin-right: 2vw;
+    padding: calc(0.5vw + 0.5vh);
+    cursor: pointer;
+    /* font-size: calc(0.7vw + 0.9vh); */
+}
+.Busqueda button:hover{
+    
+    background-color: #0c13752c;
+    /* background-color: rgb(240, 240, 240); */
+}
+
+.Busqueda .dropdown {
+    position: relative;
+    display: inline-block;
+    width: 70%;
+    background-color: #00000000;
+    margin-left: 10%;
+  }
+  
+.Busqueda .dropbtn {
+    /* background-color: rgb(240, 240, 240); */
+    color: rgb(0, 0, 0);
+    /* padding: 10px; */
+    border:1px solid black;
+    
+    width: 100%;
+    cursor: pointer;
+    padding:0.5vw;
+    padding-right: 5%;
+}
+.Busqueda .dropbtn::after {
+    content: "\25B6"; /* Código de la flecha hacia la derecha */
+    /* font-size: calc(0.5vw + 0.7vh); */
+    
+    position: absolute;
+    top: 50%; /* Alinear verticalmente al centro */
+    transform: translateY(-50%); /* Alinear verticalmente al centro */
+    right: 3px; /* Espacio a la derecha del botón */
+}
+  
+.Busqueda .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    max-height: 60vh;
+    overflow-y: auto;/* Barra de desplazamiento vertical */
+    overflow-x: hidden;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.Busqueda .dropdown-content #checklist .renglon{
+    border-bottom: 1px solid #000;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.Busqueda .dropdown-content label{
+    height: 2vh;
+    margin-top: calc(0.1vh + 0.3vw);
+    margin-bottom: calc(0.5vh + 0.3vw);
+    /* font-size: calc(0.6vh + 0.7vw); */
+    display: inline-block; /* Para permitir el uso de vertical-align */
+    vertical-align: top; /* Alinear el contenido en la parte superior */
+    margin-left: 1vw;
+    white-space: nowrap;
+    width: 15px;
+}
+
+.Busqueda .dropdown-content #checklist .renglon input[type="checkbox"]{
+    height: 2vh;
+    margin-top: calc(0.2vh + 0.5vw);
+    margin-left: calc(4vw + 5vh);
+}
+
+.Busqueda .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* ---------tabla-------- */
+.tablaScroll {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 60vw; /* Ancho de la tabla */
+    height: 73vh; /* Alto de la tabla */
+    /* margin-left: 1vw; */
+    /* margin-top: calc(-1vh - 1vw); */
+    overflow-x: auto; /* Agregar barra de desplazamiento horizontal si es necesario */
+    overflow-y: auto; /* Agregar barra de desplazamiento vertical si es necesario */
+}
+#tablaDatos{
+    border-collapse: collapse; /* Combina los bordes de las celdas */
+}
+/* Estilos para la primera fila (encabezado) */
+#tablaDatos thead tr {
+    background-color: #ddddddf5; /* Color de fondo */
+    position: sticky;
+    top: 0; /* Fijar en la parte superior */
+    z-index: 1; /* Mantener encima del cuerpo de la tabla */
+  }
+th, td{
+    border: 1px solid black; /* Borde para las celdas */
+    padding: 0; /* Espaciado interno de las celdas */
+    white-space: nowrap;
+    
+    /* display:inline-flex; */
+}
+
+th div{
+    
+    overflow: hidden;/* Oculta el contenido que desborda el div */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos*/
+    white-space: nowrap; /* Evita el salto de línea del texto */
+    margin: 0px;
+    padding: 0px;
+    min-width: 5vw;
+    display:block;
+    /* color:rgba(214, 2, 2, 0.466); */
+    resize:horizontal;
+}
+td{
+    overflow: hidden;/* Oculta el contenido que desborda el div */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos*/
+    white-space: nowrap; /* Evita el salto de línea del texto */
+    /* display:flex; */
+    /* width: auto; */
+    /* position:static; */
+    max-width: 10vw;
+    /* display:flex; */
+    /* justify-content: space-between; */
+    /* flex-direction: row; */
+}
+.darPresente input{
+    
+    height: calc(1vh + 1.1vw);
+    /* margin: -10 0 0 0; */
+    font-size: calc(1vh + 1vw);
+    padding:1%;
+    width: 10%;
+}
+.darPresente label{
+    margin: 0 0 0 3vw;
+    font-size: calc(0.8vh + 1vw);
+    padding:0;
+}
+/*--------------- detalles ----------- */
+.Detalles{
+    width: 38vw;
+    height: 100%;
+    /* margin-top: 3vw; */
+    /* margin-left: -2vw; */
+    /* position: relative; */
+    border-left: 1px solid black;
+    font-size: calc(1.5vw + 1.5vh);
+    text-align: left;
+    padding:0;
+}
+.Detalles h2{
+    width: 90%;
+}
+ .Detalles .camposPrincipalesDetalles{
+    width: 100%;
+    height: 20%;
+    /* background-color: #000; */
+ }
+.Detalles .row{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    padding: calc(0.4vw + 0.4vh);
+    height: 21%;
+    width:100%;
+    /* margin-left: -2vw; */
+    text-align: left;
+}
+.Detalles .row input,.Detalles .row label{
+    height: 100%;
+    padding: 1%;
+    
+}
+.Detalles .row label{
+    width:25%;
+    padding: 0;
+    margin: 0 0.5vw 0 0vw;
+    
+    text-align: right;
+    font-size: calc(0.5vw + 0.9vh);
+}
+.Detalles .row input{
+    /* font-size: calc(0.5vw + 1.5vh);
+    height: 150%; */
+    margin-top: -0.8%;
+    padding:2%;
+    height: calc(1vh + 1.3vw);
+    /* margin: -10 0 0 0; */
+    font-size: calc(1vh + 1vw);
+    padding:1%;
+}
+.Detalles .botonesVertical{
+    margin-bottom: -5%;
+}
+.Detalles .botonesVertical button{
+    width: calc(5vw + 4vh);
+    height: calc(3vw + 3vh);
+    padding:0;
+    margin: 0vh 0 2vh 0;
+    font-weight: bold;
+    font-size: calc(0.7vw + 0.9vh);
+    text-align: center;
+}
+
+.Detalles .botonesHorizontal button{
+    width: calc(5vw + 4vh);
+    height: calc(3vw + 3vh);
+    padding:0;
+    margin-left:3.5%;
+    margin-top:  2vh;
+    font-weight: bold;
+    font-size: calc(0.7vw + 0.9vh);
+    text-align: center;
+}
+.Detalles .checkBoxes{
+    margin-top: calc(1vh + 0.5vw);
+}
+.Detalles .checkBoxes input{
+    margin-left: calc(1vh + 0.5vw);
+    width: 4%;
+}
+
+.Detalles .tab {
+    margin-top: 2vh;
+    width: 100%;
+}
+.Detalles .tab .tablinks{
+    width: 31%;
+      
+    color: #030305;
+}
+
+.Detalles .tabDetalles{
+    display: flex;
+    flex-direction:initial;
+    width: 100%;
+    margin-top: 2vh;
+}
+.Detalles .tabDetalles *{
+    margin:0.2vw;
+}
+
+.Detalles .tabDetalles input{
+    width: 30%;
+}
+
+/* .Detalles .tabDetalles #renglon4 input{
+    width: 20%;
+    
+} */
+footer{
+    width: 90%;
+}
+
+
+
+/* --------- celular ---------- */
+
+@media (max-width:800px) {
+    *{
+        font-size: 12px;
+    }
+    body{
+        width: 97vw;
+        
+    }
+    /* .menu{
+        font-size: 12px;
+    } */
+    .main{
+        background-color: rgba(255, 255, 255, 0);
+        display:flex;
+        flex-direction: column;
+        height: auto;
+        width: 97vw;
+        position: relative;
+        top: calc(-3vw - 1vh);
+        z-index: 0;
+        
+        /* left: calc(-3vw - 3vh); */
+    }
+    .Busqueda{
+        width: 97vw;
+        
+    }
+    .tablaScroll{
+        width: 97vw;
+        height: 30vh;
+    }
+    .Detalles{
+        width: 85vw;
+        margin-top: -3%;
+        margin-left:7%;
+        border-left: 0px solid rgba(0, 0, 0, 0);
+    }
+    .Detalles .botonesHorizontal {
+        margin-left: 10%;
+    }
+    .Busqueda .campos .titulo{
+        margin-left: 2%;
+    }
+    
+    /* input{
+        margin-bottom:1%;
+        padding: 100px;
+        height: 210px; 
+    } */
+    .Busqueda .dropdown1 {
+        width: calc(10vw + 10vh);
+    }
+    #campoAvanzada{
+        width: 30%;
+    }
+    .Busqueda #columna2{
+        margin-left: -35%;
+        /* margin-top: 0.2%; */
+    }
+    
+}
+
+
+/* ------------------------------- */
+.fila{
+    display: flex;
+    flex-direction: row;
+    
+}
+.columna{
+    display: flex;
+    flex-direction: column;
+}
+
+.width5{
+    width: 5%;
+}
+.width9{
+    width: 9%;
+}
+.width10{
+    width: 10%;
+}
+.width15{
+    width: 15%;
+}
+.width17{
+    width: 17%;
+}
+.width20{
+    width: 20%;
+}
+.width40{
+    width: 40%;
+}
+.width30{
+    width: 30%;
+}
+.width70{
+    width: 70%;
+}
+.width80{
+    width: 80%;
+}
+.width100{
+    width: 100%;
+}
+
+
+
+/* input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 15px;
+} */
+
+
+
+/* #boton{
+    background-color: black;
+    color: #fff;
+    padding: 10px; 
+    border-radius: 5px;
+    border: none;
+}
+
+#boton:hover{
+    cursor: pointer;
+    background-color: rgb(213, 162, 61);
+    color: black;
+} */
+
+
+/* ---------- */
+
+
+/* .Busqueda {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px; 
+     display: flex;
+    flex-direction: row;
+    align-items: center; 
+} */
+
+/* Estilos para el formulario */
+/* .campos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+} */
+/* .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+/* input[type="text"] {
+    width: 40vw;
+} */
